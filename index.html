@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404</title>
+</head>
+<body>
+    <header class="header">
+        <img src="header.png" alt="">
+        <img src="head_mb.jpg" alt="" class="mb_hide">
+    </header>
+    <main class="main">
+        <div class="container">
+            <section class="page__404">
+                <div class="page__404_img">
+                    <img src="404.jpg" alt="">
+                </div>
+                <div class="page__404_title">
+                    <h3>Страница не найдена</h3>
+                </div>
+                <div class="page__404_txt">
+                    К сожалению, такой страницы нет на нашем сайте. <br> Возможно, она была перемещена или удалена
+                </div>
+                <div class="page__404_btn">
+                    <a href=""><span>В каталог</span></a>
+                    <a href=""><span>На главную</span></a>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer class="footer">
+        <img src="footer.jpg" alt="">
+        <img src="footer_mb.jpg" alt="" class="mb_hide">
+    </footer>
+</body>
+</html>
+
+
+<style>
+    @font-face {
+        font-family: 'Museo';
+        src: url('/fonts/MuseoSansCyrl300.woff2'),
+        url('/fonts/MuseoSansCyrl300.woff');
+        font-weight: 300;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'Museo';
+        src: url('/fonts/MuseoSansCyrl500.woff2'),
+        url('/fonts/MuseoSansCyrl500.woff');
+        font-weight: 500;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'Museo';
+        src: url('/fonts/MuseoSansCyrl700.woff2'),
+        url('/fonts/MuseoSansCyrl700.woff');
+        font-weight: 700;
+        font-style: normal;
+    }
+    body {
+        overflow-x: hidden;
+        margin: 0 0;
+    }
+    .main * {
+        font-family: 'Museo', Arial, sans-serif;
+        font-weight: 300;
+    }
+    .container {
+        width: 1420px;
+        display: block;
+        margin: 0 auto;
+    }
+    .header, .footer {
+        display: flex;
+        justify-content: center;
+    }
+    .header img, .footer img {
+        max-width: 100%;
+        object-fit: contain;
+    }
+    .mb_hide {
+        display: none;
+    }
+    .page__404 {
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 100px 0 170px 0;
+    }
+    .page__404 .page__404_img img {
+        max-width: 685px;
+        object-fit: contain;
+    }
+    .page__404 .page__404_title h3 {
+        font-size: 42px;
+        font-weight: 500;
+        margin: 35px 0 20px 0;
+    }
+    .page__404 .page__404_txt {
+        font-size: 18px;
+        text-align: center;
+        line-height: 27px;
+    }
+    .page__404 .page__404_btn {
+        margin: 35px 0 0 0;
+    }
+    .page__404 .page__404_btn {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 20px;
+    }
+    .page__404 .page__404_btn a {
+        font-size: 16px;
+        color: #268E94;
+        padding: 14px 30px;
+        border: 1px solid #ADCBCD;
+        border-radius: 10px;
+        text-decoration: none;
+    }
+    .page__404 .page__404_btn a span {
+        display: inline-block;
+        white-space: nowrap;
+        width: 90px;
+        font-weight: 500;
+        text-align: center;
+    }
+    .page__404 .page__404_btn a:hover {
+        transition: 0.3s;
+        border: 1px solid #268E94;
+        background-color: #268E94;
+    }
+    .page__404 .page__404_btn a:hover span {
+        transition: 0.3s;
+        font-weight: 700;
+        color: #fff;
+    }
+    @media screen and (max-width: 992px) {
+        body {
+            overflow-x: hidden;
+        }
+        .container {
+            width: 100%;
+            padding: 0 15px;
+            box-sizing: border-box;
+        }
+        .header img:not(.mb_hide), .footer img:not(.mb_hide) {
+            display: none;
+        }
+        .header img.mb_hide, .footer img.mb_hide {
+            display: initial;
+        }
+        .page__404 .page__404_img img {
+            width: 100%;
+        }
+        .page__404 {
+            margin: 60px 0 90px 0;
+        }
+        .page__404 .page__404_title h3 {
+            font-size: 20px;
+            margin: 35px 0 10px 0;
+        }
+        .page__404 .page__404_txt {
+            font-size: 14px;
+            line-height: initial;
+        }
+        .page__404 .page__404_txt br {
+            display: none;
+        }
+        .page__404 .page__404_btn {
+            display: grid;
+            grid-template-columns: 1fr;
+            width: 100%;
+            text-align: center;
+            grid-row-gap: 20px;
+        }
+    }
+</style>
